@@ -1,0 +1,36 @@
+# Dependencies
+node_modules
+**/node_modules
+
+# Build output
+web/dist
+web/dist-ssr
+api/dist
+shared/dist
+coverage
+**/coverage
+
+# Vite cache
+web/.vite
+
+# Package manager
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Generated files
+*.tsbuildinfo
+**/*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+**/.env
+**/.env.*
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
