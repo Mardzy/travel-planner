@@ -1,9 +1,11 @@
 import type { FastifyPluginAsync } from 'fastify';
+
 import { trips } from '../../mock-data/trips';
+import { TripIdParams } from '../types';
 
 export const getTripById: FastifyPluginAsync = async (fastify) => {
-  fastify.get('/trips/:tripId', async ({ params }, { code }) => {
-    const { tripId } = params as { tripId: string };
+  fastify.get<{ Params: TripIdParams }>('/trips/:tripId', async ({ params }, { code }) => {
+    const { tripId } = params;
 
     const trip = trips.find(({ id }) => id === tripId);
 

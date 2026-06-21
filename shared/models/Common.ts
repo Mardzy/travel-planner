@@ -12,3 +12,8 @@ export type NamedEntity = {
   id: string;
   name: string;
 };
+
+export type PersonNames = {
+  firstName: string;
+  lastName: string;
+};

@@ -1,5 +1,6 @@
-import type { NamedEntity } from './Common';
+import type { NamedEntity, PersonNames } from './Common';
 
-export type User = NamedEntity & {
+export type User = PersonNames & {
+  id: string;
   email: string;
 };

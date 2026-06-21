@@ -1,6 +1,11 @@
-import type { Auditable, NamedEntity } from './Common';
+import type { Auditable, NamedEntity, PersonNames } from './Common';
 
 export type Traveler = Auditable &
-  NamedEntity & {
+  PersonNames & {
+    id: string;
+
     email?: string;
+
+    nationality?: string;
+    birthDate?: string;
   };

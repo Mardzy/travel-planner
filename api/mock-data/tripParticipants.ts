@@ -3,7 +3,7 @@ import type { TripParticipant } from '@travel-planner/shared';
 export const tripParticipants: TripParticipant[] = [
   {
     tripId: 'trip-1',
-    travelerId: 'traveler-2',
+    id: 'traveler-2',
     departure: {
       location: 'Prague',
       airport: 'PRG',
@@ -18,7 +18,7 @@ export const tripParticipants: TripParticipant[] = [
   },
   {
     tripId: 'trip-1',
-    travelerId: 'traveler-3',
+    id: 'traveler-3',
     departure: {
       location: 'Amsterdam',
       airport: 'AMS',

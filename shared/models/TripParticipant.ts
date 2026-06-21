@@ -10,11 +10,13 @@ export type TravelLeg = {
 
 export type TripParticipant = Auditable & {
   tripId: string;
-  travelerId: string;
-
+  /**
+   * Traveler id.
+   * The participant is uniquely identified by tripId + id.
+   */
+  id: string;
   departure: TravelLeg;
   return?: TravelLeg;
-
   status: TripParticipantStatus;
   notes?: string;
 };

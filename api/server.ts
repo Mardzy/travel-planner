@@ -1,39 +1,29 @@
-// api/server.ts
-
 import Fastify from 'fastify';
 
-import { getAllTravelers } from './endpoints/travelers/getAll';
-import { getTravelerById } from './endpoints/travelers/getById';
+import { endpoints } from './endpoints';
 
-import { getTrips } from './endpoints/trips/get';
-import { getTripById } from './endpoints/trips/getById';
-import { getDashboard } from './endpoints/trips/getDashboard';
+const startServer = async () => {
+  try {
+    const server = Fastify({
+      logger: true
+    });
 
-import { getTripParticipantsByTripId } from './endpoints/trip-participants/getByTripId';
+    endpoints.forEach((endpoint) => {
+      server.register(endpoint);
+    });
 
-import { getUserById } from './endpoints/users/getById';
+    await server.listen({
+      host: '0.0.0.0',
+      port: 3000
+    });
 
-const server = Fastify({
-  logger: true
-});
+    server.log.info('Server started on port 3000');
+  } catch (error) {
+    console.error('Failed to start server');
+    console.error(error);
 
-await server.register(getAllTravelers);
-await server.register(getTravelerById);
+    process.exit(1);
+  }
+};
 
-await server.register(getTrips);
-await server.register(getTripById);
-await server.register(getDashboard);
-
-await server.register(getTripParticipantsByTripId);
-
-await server.register(getUserById);
-
-try {
-  await server.listen({
-    port: 3000,
-    host: '0.0.0.0'
-  });
-} catch (error) {
-  server.log.error(error);
-  process.exit(1);
-}
+void startServer();
