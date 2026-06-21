@@ -1,10 +1,14 @@
 export const routes = {
   home: {
-    path: "/",
-    label: "Home",
+    label: 'Home',
+    path: '/',
   },
-  docs: {
-    path: "/docs",
-    label: "Docs",
+  trips: {
+    label: 'Trips',
+    path: '/trips',
   },
-};
+  users: {
+    label: 'Users',
+    path: '/users',
+  },
+} as const;

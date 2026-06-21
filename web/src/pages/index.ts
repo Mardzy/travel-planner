@@ -1,2 +1,3 @@
-export { Docs } from './docs/docs';
-export { Home } from "./home/home";
+export { Home } from './home';
+export { Trips } from './trips';
+export { Users } from './users';

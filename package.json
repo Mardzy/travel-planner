@@ -9,6 +9,7 @@
     "web": "pnpm --filter web dev"
   },
   "devDependencies": {
+    "concurrently": "^10.0.3",
     "only-allow": "^1.2.2"
   }
 }

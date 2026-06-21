@@ -1,1 +1,1 @@
-export { Page } from "./page/page";
+export * from './layout'
