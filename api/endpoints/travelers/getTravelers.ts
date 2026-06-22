@@ -1,9 +1,10 @@
 import type { FastifyPluginAsync } from 'fastify';
 
 import { travelers } from '../../mock-data';
+import { ROUTES } from '../routes';
 
 export const getTravelers: FastifyPluginAsync = async (fastify) => {
-  fastify.get('/travelers', async (_, reply) => {
+  fastify.get(ROUTES.travelers.root, async (_, reply) => {
     try {
       return travelers;
     } catch (error) {

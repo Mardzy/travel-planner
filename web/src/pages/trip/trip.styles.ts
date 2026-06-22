@@ -1,13 +1,9 @@
 import { makeStyles, tokens } from '@fluentui/react-components';
 
-export const useTripsStyles = makeStyles({
+export const useTripStyles = makeStyles({
   page: {
     display: 'flex',
     flexDirection: 'column',
     gap: tokens.spacingVerticalL
-  },
-  list: {
-    display: 'grid',
-    gap: tokens.spacingVerticalM
   }
 });

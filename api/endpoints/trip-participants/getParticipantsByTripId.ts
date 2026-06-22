@@ -4,10 +4,11 @@ import type { TripParticipantDto } from '@travel-planner/shared';
 import { travelers, tripParticipants } from '../../mock-data';
 import { createTripParticipantDto } from '../../dto';
 import { TripIdParams } from '../types';
+import { ROUTES } from '../routes';
 
 export const getParticipantsByTripId: FastifyPluginAsync = async (fastify) => {
   fastify.get<{ Params: TripIdParams }>(
-    '/trips/:tripId/participants',
+    ROUTES.trips.participants,
     async (request, reply): Promise<TripParticipantDto[] | void> => {
       try {
         const { tripId } = request.params;

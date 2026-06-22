@@ -13,12 +13,15 @@
     "@fluentui/react": "^8.125.6",
     "@fluentui/react-components": "^9.74.1",
     "@fluentui/react-icons": "^2.0.328",
+    "@tanstack/react-query": "^5.101.0",
+    "@travel-planner/shared": "workspace:*",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.17.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@tanstack/react-query-devtools": "^5.101.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
@@ -34,10 +37,9 @@
     "globals": "^17.6.0",
     "jsdom": "^29.1.1",
     "prettier": "^3.8.3",
-    "typescript": "~6.0.2",
+    "typescript": "~5.9.3",
     "typescript-eslint": "^8.59.2",
     "vite": "^8.0.12",
-    "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.1.8"
   }
 }

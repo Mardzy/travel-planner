@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "fastify": "^5.8.5",
-    "@travel-planner/shared": "workspace:*"
+    "@fastify/cors": "^11.2.0",
+    "@travel-planner/shared": "workspace:*",
+    "fastify": "^5.8.5"
   },
   "devDependencies": {
     "@types/node": "^25.9.3",
